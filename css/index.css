@@ -3,7 +3,7 @@
 }
 
 @keyframe enter{
-	animation: 
+
 } 
 
 
@@ -37,19 +37,19 @@ ul li{
 }
 
 
-.off{
+/*.off{
 	display: none;
 }
 
 
 .active{
 	display: relative;
-}
+}*/
 
 
 
 .resume{
-	background-image: url(../images/aircraft.jpg);
+	/*background-image: url(../images/aircraft.jpg);*/
 	margin: 0px;
 	color: white;
 	background-size:cover;
