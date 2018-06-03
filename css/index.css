@@ -1,12 +1,16 @@
-@keyframe leave{
-	transform: translate;
+@keyframes leave{
+
+form,to{
+	display: none;
+}
+10%{
+
+}
 }
 
-@keyframe enter{
+@keyframes enter{
 
 } 
-
-
 
 body{
 	margin: 0;
@@ -37,19 +41,8 @@ ul li{
 }
 
 
-/*.off{
-	display: none;
-}
-
-
-.active{
-	display: relative;
-}*/
-
-
 
 .resume{
-	/*background-image: url(../images/aircraft.jpg);*/
 	margin: 0px;
 	color: white;
 	background-size:cover;
@@ -60,3 +53,5 @@ ul li{
 .skills{
 	font-size: 20px;
 }
+
+
