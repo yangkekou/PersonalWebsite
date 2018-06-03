@@ -3,13 +3,13 @@
 <head>
 	<title>welcome</title>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
-
+     
 	<script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
 <script type="text/javascript">
    $youziku.load("body", "9c8664c41904427992c6df5db3e495bb", "LiDeBiao-Xing3");
    $youziku.draw();
 </script> 
-
+<script type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
 <nav>
@@ -42,7 +42,7 @@
 	</div>
 	<div class="item-location">
 		<ul>
-			<li>齐齐哈尔大学</li>
+			<li>齐齐哈尔大学中区学生公寓1#305</li>
 		</ul>
 	</div>
 	<div class="item-language">
@@ -52,7 +52,7 @@
 		</ul>
 	</div>
 
-	<div class="prize">
+	<div class="item-prize">
 		<ul>
 			<li>中国电信奖学金（飞young奖）</li>
 			<li>国家励志奖学金（三次）</li>
@@ -68,18 +68,22 @@
 			<li>扶我起来，我还能敲几行代码</li>
 		</ul>
 	</div>
+</div>
 
-	<div class="item-nav">
+<!-- this is a nav bar can decide which will show in browser -->
+
+	<div class="personal-nav">
 		<ul>
-			<li>个人信息</li>
-			<li>教育背景</li>
-			<li>现居地</li>
-			<li>英语水平</li>
-			<li>曾获奖励</li>
-			<li>座右铭</li>
+			<li data-bind="item-personal">个人信息</li>
+			<li data-bind="item-education">教育背景</li>
+			<li data-bind="item-location">现居地</li>
+			<li data-bind="item-language">英语水平</li>
+			<li data-bind="item-prize">曾获奖励</li>
+			<li data-bind="item-motto">座右铭</li>
 		</ul>
 	</div>
-</div>
+
+
 
 <!-- the div will display information about my skills -->
 <div class="skills">
@@ -88,7 +92,6 @@
 			<li>c/c++</li>
 			<li>java</li>
 			<li>javascript</li>
-			<li></li>
 		</ul>
 	</div>
 

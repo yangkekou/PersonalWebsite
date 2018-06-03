@@ -4,7 +4,7 @@ form,to{
 	display: none;
 }
 10%{
-
+right:10%;
 }
 }
 
@@ -44,7 +44,6 @@ ul li{
 
 .resume{
 	margin: 0px;
-	color: white;
 	background-size:cover;
 }
 
