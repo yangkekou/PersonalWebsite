@@ -3,6 +3,7 @@
 <head>
 	<title>welcome</title>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="./css/awesome.css">
 	<meta charset="utf-8">
      
 	<script type="text/javascript" src="https://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
@@ -75,12 +76,12 @@
 
 	<div class="personal-nav">
 		<ul>
-			<li data-bind="item-personal"><i class="fa fa-camro"></i>个人信息</li>
-			<li data-bind="item-education">教育背景</li>
-			<li data-bind="item-location">现居地</li>
-			<li data-bind="item-language">英语水平</li>
-			<li data-bind="item-prize">曾获奖励</li>
-			<li data-bind="item-motto">座右铭</li>
+			<li data-bind="item-personal"><i class="fa fa-camera-retro"></i>个人信息</li>
+			<li data-bind="item-education"><i class="fa fa-graduation-cap"></i>教育背景</li>
+			<li data-bind="item-location"><i class="fa fa-map"></i>现居地</li>
+			<li data-bind="item-language"><i class="fa fa-language"></i>英语水平</li>
+			<li data-bind="item-prize"><i class="fa fa-trophy"></i>曾获奖励</li>
+			<li data-bind="item-motto"><i class="fa fa-microphone"></i>座右铭</li>
 		</ul>
 	</div>
 
@@ -88,7 +89,7 @@
 
 <!-- the div will display information about my skills -->
 <div class="skills">
-	<div "skill-language">
+	<div class="skill-language">
 		<ul>
 			<li>c/c++</li>
 			<li>java</li>
@@ -147,15 +148,15 @@
 
 <div class="contain">
 	<div class="items">
-		<div><span>语言</span></div>
-		<div><span>平台</span></div>
+		<div data-bind="skill-language"><span>语言</span></div>
+		<div data-bind="skill-platform"><span>平台</span></div>
 	</div>
 	<div class="items">
-		<div><span>框架</span></div>
+		<div data-bind="skill-framework"><span>框架</span></div>
 	</div>
 	<div class="items">
-		<div><span>数据库</span></div>
-		<div><span>项目工具</span></div>
+		<div data-bind="skill-database"><span>数据库</span></div>
+		<div data-bind="skill-manageTools"><span>管理工具</span></div>
 	</div>
 </div>
 
