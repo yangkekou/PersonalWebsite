@@ -10,8 +10,8 @@ document.querySelectorAll(".resume>div").forEach(
      }
 	);
 
-document.querySelectorAll('skills>div').forEach(function(e){
- e.style.display=none;
+document.querySelectorAll('.skills>div').forEach(function(e,index){
+    e.style.order=++index;
 });
 
 }
@@ -45,7 +45,7 @@ document.querySelectorAll('.items>div').forEach(
 
 //these code is for scroll to next context
 document.querySelector('.fa-angle-double-down').addEventListener('click',(e)=>{
-  window.scrollTo( 0,window.innerHeight);
+  window.scrollBy( 0,window.innerHeight);
 });
 
 
@@ -95,9 +95,11 @@ function PersonalNav(){
 
 function skillNav(){
 	let current=document.querySelector('.skill-language');
-    current.style.display=null;
 	return function(event){
-		alert(this.dataset.bind);
+		let tem=document.getElementsByClassName(this.dataset.bind)[0].style.order;
+    document.getElementsByClassName(this.dataset.bind)[0].style.order=current.style.order;
+    current.style.order=tem;
+    current=document.getElementsByClassName(this.dataset.bind)[0];
 	};
 }
 

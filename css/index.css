@@ -100,7 +100,7 @@ ul li{
 	padding-top: 40px;
 	position:relative;
 	right:-600px;
-	font-size: 22px;
+	font-size: 20px;
 }
 
 
@@ -134,7 +134,7 @@ ul li{
 
 .fa-angle-double-down{
     display: block;
-    position:absolute;
+    position:fixed;
     bottom: 30px;
     font-size: 40px;
     font-weight: bolder;
@@ -144,6 +144,7 @@ ul li{
     color: #ff4547;
     transform: translateY(-20px);
     animation: angle  1000ms  ease-in  200ms infinite alternate;
+    cursor: default;
 }
 
 .skills{
@@ -162,6 +163,7 @@ ul li{
     padding-top: 20px;
     margin-left: 20px;
     font-size: 28px;
+    transition: all 1000ms ease-in 100ms;
 }
 
 .skills li{
@@ -227,3 +229,6 @@ ul li{
         }
 
 
+.works{
+    font-size: 30px;
+}
