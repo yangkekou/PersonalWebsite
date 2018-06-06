@@ -42,6 +42,15 @@ document.querySelectorAll('.items>div').forEach(
 	}
 
 	);
+
+//these code is for scroll to next context
+document.querySelector('.fa-angle-double-down').addEventListener('click',(e)=>{
+  window.scrollTo( 0,window.innerHeight);
+});
+
+
+
+
 }
 
 
@@ -88,9 +97,6 @@ function skillNav(){
 	let current=document.querySelector('.skill-language');
     current.style.display=null;
 	return function(event){
- 		current.style.display
-		if(this.dataset.bind.split(',').length!=1)
-		alert(this.dataset.bind.split(',')[1])
 		alert(this.dataset.bind);
 	};
 }
