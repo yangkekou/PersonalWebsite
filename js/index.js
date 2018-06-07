@@ -10,9 +10,7 @@ document.querySelectorAll(".resume>div").forEach(
      }
 	);
 
-document.querySelectorAll('.skills>div').forEach(function(e,index){
-    e.style.order=++index;
-});
+document.querySelector('.skills').style.height=window.innerHeight+'px';
 
 
 document.querySelector('.works').style.height=p_height+'px';
@@ -48,7 +46,7 @@ document.querySelectorAll('.items>div').forEach(
 //these code is for scroll to next context
 document.querySelector('.fa-angle-double-down').addEventListener('click',function(e){
   window.scrollBy( 0,window.innerHeight);
-  if(document.body.scrollTop+window.innerHeight>document.body.clientHeight){
+  if(document.body.scrollTop+window.innerHeight>document.body.clientHeight||document.documentElement.scrollTop+window.innerHeight>document.body.clientHeight){
     this.classList.remove('fa-angle-double-down');
     this.classList.add('fa-angle-double-up');
      this.removeEventListener("click",arguments.callee);
@@ -107,12 +105,43 @@ function PersonalNav(){
 
 
 function skillNav(){
+  let colors=['#ff9966','#009999','#01d578','#66cccc','#009966'];
 	let current=document.querySelector('.skill-language');
+  current.classList.add('slider');
+  current.style.display="inline-block";
+  let i=(Math.ceil(Math.random()*4)%4+1);
+  current.style.backgroundColor=colors[i];
+  let start=0;
+
+
+function slider(){
+  start++;
+  start=start%5;
+  current.style.display=null;
+let s=document.querySelectorAll('.skills>div')[start];
+let colors=['#ff9966','#009999','#01d578','#66cccc','#009966'];
+let i=(Math.ceil(Math.random()*4)%4+1);
+s.classList.add('slider');
+s.style.display="inline-block";
+s.style.backgroundColor=colors[i];
+current=s;
+}
+
+
+
+  setInterval(slider,5000);
+  
 	return function(event){
-		let tem=document.getElementsByClassName(this.dataset.bind)[0].style.order;
-    document.getElementsByClassName(this.dataset.bind)[0].style.order=current.style.order;
-    current.style.order=tem;
-    current=document.getElementsByClassName(this.dataset.bind)[0];
+	 current.classList.remove('slider');
+   current.style.display=null;
+   current=document.getElementsByClassName(this.dataset.bind)[0];
+   start=this.dataset.order;
+   current.classList.add('slider');
+   current.style.display="inline-block";
+   current.style.backgroundColor=colors[(Math.ceil(Math.random()*4)%4+1)];
 	};
 }
+
+
+
 
