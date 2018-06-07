@@ -103,6 +103,13 @@ ul li{
 	font-size: 20px;
 }
 
+.resume>div:nth-of-type(1){
+    font-size:16px;
+}
+
+.resume li{
+    margin:10px 0 0 0;
+}
 
 .skills{
 	font-size: 20px;
@@ -132,7 +139,7 @@ ul li{
 	color: #2684e6;
 }
 
-.fa-angle-double-down{
+.fa-angle-double-down,.fa-angle-double-up{
     display: block;
     position:fixed;
     bottom: 30px;
@@ -230,5 +237,16 @@ ul li{
 
 
 .works{
-    font-size: 30px;
+    font-size: 20px;
+    display:flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    margin-bottom:40px;
+}
+
+
+.works>div{
+width: 30%;
+border: 1px solid #ff4547;
+border-radius:10px;
 }

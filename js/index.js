@@ -1,4 +1,4 @@
-var p_height=window.innerHeight-110;
+var p_height=window.innerHeight-120;
 
 
 //this function is used to init the status of my website,for example,some div's height and etc.
@@ -14,6 +14,8 @@ document.querySelectorAll('.skills>div').forEach(function(e,index){
     e.style.order=++index;
 });
 
+
+document.querySelector('.works').style.height=p_height+'px';
 }
 
 
@@ -44,11 +46,22 @@ document.querySelectorAll('.items>div').forEach(
 	);
 
 //these code is for scroll to next context
-document.querySelector('.fa-angle-double-down').addEventListener('click',(e)=>{
+document.querySelector('.fa-angle-double-down').addEventListener('click',function(e){
   window.scrollBy( 0,window.innerHeight);
+  if(document.body.scrollTop+window.innerHeight>document.body.clientHeight){
+    this.classList.remove('fa-angle-double-down');
+    this.classList.add('fa-angle-double-up');
+     this.removeEventListener("click",arguments.callee);
+     let down=arguments.callee;
+     document.querySelector('.fa-angle-double-up').addEventListener('click',function(e){
+                  window.scrollTo(0,0);
+                  this.classList.remove('fa-angle-double-up');
+                  this.classList.add('fa-angle-double-down');
+                  this.removeEventListener("click",arguments.callee);
+                  this.addEventListener('click',down);
+          });
+  }
 });
-
-
 
 
 }
